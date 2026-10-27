@@ -1,0 +1,47 @@
+name: Bug report
+description: Report a bug
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report !
+        Please do **not** report security vulnerabilities here: see the [security policy](https://github.com/dhondta/.github/blob/main/SECURITY.md).
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Version of the project (`--help` usually prints it), Python version and OS.
+      placeholder: e.g. 1.2.3, Python 3.12, Ubuntu 24.04
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem description
+      description: Clearly explain the problem you are encountering and what you expected instead.
+      placeholder: What is going wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: traceback
+    attributes:
+      label: Traceback / Error output
+      description: Paste the full traceback or error output, ideally in verbose mode.
+      render: shell
+      placeholder: |
+        Traceback (most recent call last):
+          ...
+    validations:
+      required: false
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide the commands to reproduce the issue. If an input file triggers it, attach it or give a link to it (please don't attach live malware).
+      placeholder: |
+        1. command-one --arg
+        2. command-two --flag
+        3. command-three
+    validations:
+      required: true
